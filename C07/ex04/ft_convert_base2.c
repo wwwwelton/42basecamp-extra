@@ -70,7 +70,7 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to)
 		n = n / ft_strlen(base_to);
 		digits++;
 	}
-	result = (char *)malloc(sizeof(nbr) * (digits + signal + 1));
+	result = (char *)malloc(sizeof(result) * (digits + signal + 1));
 	ft_putnbr_base(temp, base_to, result, signal);
 	return (result);
 }

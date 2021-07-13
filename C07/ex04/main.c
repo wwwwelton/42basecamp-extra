@@ -5,12 +5,18 @@ char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
 
 int	main(void)
 {
+	char *nbr = { "52" };
+	char *base_from = { "0123456789" };
+	char *base_to = { "01" };
 	char *result;
 
-	result = ft_convert_base("52", "0123456789", "01");
+	result = ft_convert_base(nbr, base_from, base_to);
 	printf("BASE:     52\n");
 	printf("RESULT:   %s\n", result);
 	printf("EXPECTED: 110100\n\n");
+
+	printf("NBR: %s | BASE_FROM: %s | BASE_TO: %s\n", nbr, base_from, base_to);
+	printf("NBR: 52 | BASE_FROM: 0123456789 | BASE_TO: 01\n\n");
 
 	result = ft_convert_base("-1", "0123456789", "01");
 	printf("BASE:     -1\n");
